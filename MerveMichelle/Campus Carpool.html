@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Fahrerinformationen</title>
+</head>
+<body>
+
+<h1>Fahrerinformationen</h1>
+
+<table border="1" id="fahrerTabelle">
+    <tr>
+        <th>Name</th>
+        <th>Alter</th>
+        <th>Automarke</th>
+        <th>Freie Plätze</th>
+    </tr>
+</table>
+
+<h2>Fahrer registrieren</h2>
+<form id="registrierungsFormular">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="alter">Alter:</label>
+    <input type="number" id="alter" name="alter"><br><br>
+
+    <label for="auto">Auto:</label>
+    <input type="text" id="auto" name="auto"><br><br>
+
+    <label for="platz">Freie Plätze:</label>
+    <input type="number" id="platz" name="platz"><br><br>
+
+    <input type="button" value="Registrieren" onclick="speichereFahrer()"><br><br>
+
+    <label for="auswahlFahrer">Wähle einen Fahrer:</label>
+    <select id="auswahlFahrer" onchange="reduzierePlatz()">
+        <option value="">-- Fahrer auswählen --</option>
+    </select>
+</form>
+
+<script src="skript.js"></script>
+
+</body>
+</html>
